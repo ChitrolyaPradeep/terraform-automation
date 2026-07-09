@@ -1,0 +1,120 @@
+2026-07-09T12:00:18.178Z [INFO]  Terraform version: 1.15.1
+2026-07-09T12:00:18.179Z [DEBUG] using github.com/hashicorp/go-tfe v1.94.0
+2026-07-09T12:00:18.179Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.24.0
+2026-07-09T12:00:18.179Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.2.1
+2026-07-09T12:00:18.179Z [DEBUG] using github.com/zclconf/go-cty v1.18.0
+2026-07-09T12:00:18.179Z [INFO]  Go runtime version: go1.25.8
+2026-07-09T12:00:18.179Z [INFO]  CLI args: []string{"terraform", "init"}
+2026-07-09T12:00:18.179Z [DEBUG] Attempting to open CLI config file: /home/mpsaps/.terraformrc
+2026-07-09T12:00:18.179Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2026-07-09T12:00:18.180Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2026-07-09T12:00:18.180Z [DEBUG] ignoring non-existing provider search directory /home/mpsaps/.terraform.d/plugins
+2026-07-09T12:00:18.180Z [DEBUG] ignoring non-existing provider search directory /home/mpsaps/.local/share/terraform/plugins
+2026-07-09T12:00:18.180Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2026-07-09T12:00:18.180Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2026-07-09T12:00:18.180Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2026-07-09T12:00:18.183Z [INFO]  CLI command args: []string{"init"}
+2026-07-09T12:00:18.203Z [DEBUG] ReferenceTransformer: "var.map_value" references: []
+2026-07-09T12:00:18.203Z [DEBUG] ReferenceTransformer: "var.region" references: []
+2026-07-09T12:00:18.203Z [DEBUG] ReferenceTransformer: "var.ec2-instance-type" references: []
+2026-07-09T12:00:18.203Z [DEBUG] ReferenceTransformer: "var.ami_id" references: []
+2026-07-09T12:00:18.203Z [DEBUG] ReferenceTransformer: "var.name_ec2" references: []
+2026-07-09T12:00:18.203Z [DEBUG] ReferenceTransformer: "var.instance_count" references: []
+2026-07-09T12:00:18.203Z [DEBUG] ReferenceTransformer: "var.instance_types" references: []
+2026-07-09T12:00:18.203Z [DEBUG] ReferenceTransformer: "var.set_value" references: []
+2026-07-09T12:00:18.203Z [DEBUG] Starting graph walk: walkInit
+2026-07-09T12:00:18.210Z [DEBUG] Service discovery for registry.terraform.io at https://registry.terraform.io/.well-known/terraform.json
+2026-07-09T12:00:18.427Z [DEBUG] GET https://registry.terraform.io/v1/providers/hashicorp/aws/versions
+2026-07-09T12:00:20.443Z [DEBUG] backend-s3.aws-base: Resolving credentials provider: tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate
+2026-07-09T12:00:20.443Z [DEBUG] backend-s3.aws-base: Loading configuration: tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate
+2026-07-09T12:00:20.443Z [DEBUG] backend-s3.aws-base: Retrieving credentials: tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate
+2026-07-09T12:00:20.445Z [INFO]  backend-s3.aws-base: Retrieved credentials: tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate tf_aws.credentials_source="SharedConfigCredentials: /home/mpsaps/.aws/credentials"
+2026-07-09T12:00:20.445Z [DEBUG] backend-s3.aws-base: Loading configuration: tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate
+2026-07-09T12:00:20.445Z [DEBUG] backend-s3.aws-base: Retrieving caller identity from STS: tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate
+2026-07-09T12:00:20.449Z [DEBUG] backend-s3.aws-base: HTTP Request Sent: aws.region=us-west-2 rpc.method=STS/GetCallerIdentity rpc.system.name=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate net.peer.name=sts.us-west-2.amazonaws.com http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.15.1 (+https://www.terraform.io) aws-sdk-go-v2/1.41.5 ua/2.1 os/linux lang/go#1.25.8 md/GOOS#linux md/GOARCH#amd64 api/sts#1.41.9 m/n" http.request.header.amz_sdk_invocation_id=e3a49e4c-493f-4258-a82f-794ac3e4b45f http.request.header.amz_sdk_request="attempt=1; max=5" http.request.header.x_amz_date=20260709T120020Z http.method=POST http.url=https://sts.us-west-2.amazonaws.com/ http.request_content_length=43 http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************QIGY/20260709/us-west-2/sts/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-request;content-length;content-type;host;x-amz-date, Signature=*****" http.request.header.content_type=application/x-www-form-urlencoded
+  http.request.body=
+  | Action=GetCallerIdentity&Version=2011-06-15
+  
+2026-07-09T12:00:21.253Z [DEBUG] backend-s3.aws-base: HTTP Response Received: aws.region=us-west-2 rpc.method=STS/GetCallerIdentity rpc.system.name=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate http.response_content_length=409 http.response.header.date="Thu, 09 Jul 2026 12:00:21 GMT" http.response.header.x_amzn_requestid=bc74f0be-27ef-48b9-8452-388486c7aee6 http.response.header.x_amz_sts_extended_request_id=MTp1cy13ZXN0LTI6UzoxNzgzNTk4NDIxNDcxOlI6aHpVd1gzWWk= http.response.header.content_type=text/xml
+  http.response.body=
+  | <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  |   <GetCallerIdentityResult>
+  |     <Arn>arn:aws:iam::800380166662:user/argo-cd-user</Arn>
+  |     <UserId>AIDA*************R5JS</UserId>
+  |     <Account>800380166662</Account>
+  |   </GetCallerIdentityResult>
+  |   <ResponseMetadata>
+  |     <RequestId>bc74f0be-27ef-48b9-8452-388486c7aee6</RequestId>
+  |   </ResponseMetadata>
+  | </GetCallerIdentityResponse>
+   http.duration=803 http.status_code=200
+2026-07-09T12:00:21.254Z [INFO]  backend-s3.aws-base: Retrieved caller identity from STS: tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate
+2026-07-09T12:00:21.254Z [DEBUG] backend-s3.aws-base: Retrieving caller identity from STS: tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate
+2026-07-09T12:00:21.255Z [DEBUG] backend-s3.aws-base: HTTP Request Sent: aws.region=us-west-2 rpc.method=STS/GetCallerIdentity rpc.system.name=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************QIGY/20260709/us-west-2/sts/aws4_request, SignedHeaders=amz-sdk-invocation-id;amz-sdk-request;content-length;content-type;host;x-amz-date, Signature=*****" http.method=POST http.url=https://sts.us-west-2.amazonaws.com/ http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.15.1 (+https://www.terraform.io) aws-sdk-go-v2/1.41.5 ua/2.1 os/linux lang/go#1.25.8 md/GOOS#linux md/GOARCH#amd64 api/sts#1.41.9 m/n" http.request.header.amz_sdk_invocation_id=ec1eafe3-3736-4a22-8e89-ac7e18bcd917 http.request.header.amz_sdk_request="attempt=1; max=5" http.request.header.x_amz_date=20260709T120021Z http.request.header.content_type=application/x-www-form-urlencoded
+  http.request.body=
+  | Action=GetCallerIdentity&Version=2011-06-15
+   net.peer.name=sts.us-west-2.amazonaws.com http.request_content_length=43
+2026-07-09T12:00:21.501Z [DEBUG] backend-s3.aws-base: HTTP Response Received: aws.region=us-west-2 rpc.method=STS/GetCallerIdentity rpc.system.name=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate http.duration=246 http.status_code=200 http.response_content_length=409 http.response.header.x_amzn_requestid=f5cdd0d2-7191-4937-9909-00be463fd6a3 http.response.header.x_amz_sts_extended_request_id=MTp1cy13ZXN0LTI6UzoxNzgzNTk4NDIxNzIyOlI6UkNCeTNtZHg= http.response.header.content_type=text/xml http.response.header.date="Thu, 09 Jul 2026 12:00:21 GMT"
+  http.response.body=
+  | <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+  |   <GetCallerIdentityResult>
+  |     <Arn>arn:aws:iam::800380166662:user/argo-cd-user</Arn>
+  |     <UserId>AIDA*************R5JS</UserId>
+  |     <Account>800380166662</Account>
+  |   </GetCallerIdentityResult>
+  |   <ResponseMetadata>
+  |     <RequestId>f5cdd0d2-7191-4937-9909-00be463fd6a3</RequestId>
+  |   </ResponseMetadata>
+  | </GetCallerIdentityResponse>
+  
+2026-07-09T12:00:21.501Z [INFO]  backend-s3.aws-base: Retrieved caller identity from STS: tf_backend.operation=Configure tf_backend.req_id=92934f3d-5d38-5995-f29f-adec396a1d3e tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.s3.path=terraform.tfstate
+2026-07-09T12:00:21.523Z [DEBUG] backend-s3: HTTP Request Sent: aws.region=us-west-2 aws.s3.bucket=mpsaps-state-12345 rpc.method=S3/ListObjectsV2 rpc.system.name=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Workspaces tf_backend.req_id=a75cbb6a-8a98-d58a-4da9-e3fc076d5cd8 tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.workspace-prefix=env:/ http.user_agent="APN/1.0 HashiCorp/1.0 Terraform/1.15.1 (+https://www.terraform.io) aws-sdk-go-v2/1.41.5 ua/2.1 os/linux lang/go#1.25.8 md/GOOS#linux md/GOARCH#amd64 api/s3#1.97.3 m/C,n" http.request.header.amz_sdk_invocation_id=33d69f67-370f-495a-980f-da4809c888eb http.request.header.amz_sdk_request="attempt=1; max=5" http.request.header.x_amz_date=20260709T120021Z http.request.body="" http.method=GET http.url="https://mpsaps-state-12345.s3.us-west-2.amazonaws.com/?list-type=2&max-keys=1000&prefix=env%3A%2F" http.request.header.authorization="AWS4-HMAC-SHA256 Credential=AKIA************QIGY/20260709/us-west-2/s3/aws4_request, SignedHeaders=accept-encoding;amz-sdk-invocation-id;amz-sdk-request;host;x-amz-content-sha256;x-amz-date, Signature=*****" http.request.header.accept_encoding=identity http.request.header.x_amz_content_sha256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 net.peer.name=mpsaps-state-12345.s3.us-west-2.amazonaws.com
+2026-07-09T12:00:22.400Z [DEBUG] backend-s3: HTTP Response Received: aws.region=us-west-2 aws.s3.bucket=mpsaps-state-12345 rpc.method=S3/ListObjectsV2 rpc.system.name=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_aws.signing_region="" tf_backend.operation=Workspaces tf_backend.req_id=a75cbb6a-8a98-d58a-4da9-e3fc076d5cd8 tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.workspace-prefix=env:/
+  http.response.body=
+  | <?xml version="1.0" encoding="UTF-8"?>
+  | <Error><Code>NoSuchBucket</Code><Message>The specified bucket does not exist</Message><BucketName>mpsaps-state-12345</BucketName><RequestId>FFGKF73S0TJ8NT92</RequestId><HostId>mVb1qqnzCwBsXbSXqYXIy1OY+7KQAfoBjZjensXm/noAEecxE0gumAtERAGxwoS7dMfpn6Mz8x9DcQtQDoRgRWgb7xdikrrn</HostId></Error>
+   http.duration=877 http.status_code=404 http.response.header.content_type=application/xml http.response.header.date="Thu, 09 Jul 2026 12:00:21 GMT" http.response.header.server=AmazonS3 http.response.header.x_amz_request_id=FFGKF73S0TJ8NT92 http.response.header.x_amz_id_2="mVb1qqnzCwBsXbSXqYXIy1OY+7KQAfoBjZjensXm/noAEecxE0gumAtERAGxwoS7dMfpn6Mz8x9DcQtQDoRgRWgb7xdikrrn"
+2026-07-09T12:00:22.404Z [DEBUG] backend-s3: request failed with unretryable error https response error StatusCode: 404, RequestID: FFGKF73S0TJ8NT92, HostID: mVb1qqnzCwBsXbSXqYXIy1OY+7KQAfoBjZjensXm/noAEecxE0gumAtERAGxwoS7dMfpn6Mz8x9DcQtQDoRgRWgb7xdikrrn, NoSuchBucket: The specified bucket does not exist: aws.region=us-west-2 aws.s3.bucket=mpsaps-state-12345 rpc.method=S3/ListObjectsV2 rpc.system.name=aws-api tf_aws.sdk=aws-sdk-go-v2 tf_backend.operation=Workspaces tf_backend.req_id=a75cbb6a-8a98-d58a-4da9-e3fc076d5cd8 tf_backend.s3.bucket=mpsaps-state-12345 tf_backend.workspace-prefix=env:/
+2026-07-09T12:00:59.507Z [INFO]  Terraform version: 1.15.1
+2026-07-09T12:00:59.507Z [DEBUG] using github.com/hashicorp/go-tfe v1.94.0
+2026-07-09T12:00:59.507Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.24.0
+2026-07-09T12:00:59.507Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.2.1
+2026-07-09T12:00:59.507Z [DEBUG] using github.com/zclconf/go-cty v1.18.0
+2026-07-09T12:00:59.507Z [INFO]  Go runtime version: go1.25.8
+2026-07-09T12:00:59.507Z [INFO]  CLI args: []string{"terraform", "init"}
+2026-07-09T12:00:59.507Z [DEBUG] Attempting to open CLI config file: /home/mpsaps/.terraformrc
+2026-07-09T12:00:59.507Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2026-07-09T12:00:59.507Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2026-07-09T12:00:59.507Z [DEBUG] ignoring non-existing provider search directory /home/mpsaps/.terraform.d/plugins
+2026-07-09T12:00:59.507Z [DEBUG] ignoring non-existing provider search directory /home/mpsaps/.local/share/terraform/plugins
+2026-07-09T12:00:59.507Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2026-07-09T12:00:59.507Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2026-07-09T12:00:59.507Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2026-07-09T12:00:59.507Z [INFO]  CLI command args: []string{"init"}
+2026-07-09T12:00:59.509Z [DEBUG] ReferenceTransformer: "var.name_ec2" references: []
+2026-07-09T12:00:59.509Z [DEBUG] ReferenceTransformer: "var.instance_count" references: []
+2026-07-09T12:00:59.509Z [DEBUG] ReferenceTransformer: "var.instance_types" references: []
+2026-07-09T12:00:59.509Z [DEBUG] ReferenceTransformer: "var.set_value" references: []
+2026-07-09T12:00:59.509Z [DEBUG] ReferenceTransformer: "var.map_value" references: []
+2026-07-09T12:00:59.509Z [DEBUG] ReferenceTransformer: "var.region" references: []
+2026-07-09T12:00:59.509Z [DEBUG] ReferenceTransformer: "var.ec2-instance-type" references: []
+2026-07-09T12:00:59.509Z [DEBUG] ReferenceTransformer: "var.ami_id" references: []
+2026-07-09T12:00:59.510Z [DEBUG] Starting graph walk: walkInit
+2026-07-09T12:00:59.512Z [DEBUG] Service discovery for registry.terraform.io at https://registry.terraform.io/.well-known/terraform.json
+2026-07-09T12:00:59.600Z [DEBUG] GET https://registry.terraform.io/v1/providers/hashicorp/aws/versions
+2026-07-09T12:01:36.741Z [INFO]  Terraform version: 1.15.1
+2026-07-09T12:01:36.741Z [DEBUG] using github.com/hashicorp/go-tfe v1.94.0
+2026-07-09T12:01:36.741Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.24.0
+2026-07-09T12:01:36.741Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.2.1
+2026-07-09T12:01:36.741Z [DEBUG] using github.com/zclconf/go-cty v1.18.0
+2026-07-09T12:01:36.741Z [INFO]  Go runtime version: go1.25.8
+2026-07-09T12:01:36.741Z [INFO]  CLI args: []string{"terraform", "plan"}
+2026-07-09T12:01:36.742Z [DEBUG] Attempting to open CLI config file: /home/mpsaps/.terraformrc
+2026-07-09T12:01:36.742Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2026-07-09T12:01:36.742Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2026-07-09T12:01:36.742Z [DEBUG] ignoring non-existing provider search directory /home/mpsaps/.terraform.d/plugins
+2026-07-09T12:01:36.742Z [DEBUG] ignoring non-existing provider search directory /home/mpsaps/.local/share/terraform/plugins
+2026-07-09T12:01:36.742Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2026-07-09T12:01:36.742Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2026-07-09T12:01:36.742Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2026-07-09T12:01:36.743Z [INFO]  CLI command args: []string{"plan"}
