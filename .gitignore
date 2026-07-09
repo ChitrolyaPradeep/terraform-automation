@@ -1,0 +1,5 @@
+.terraform/
+ ec2_details/
+ terraform-key.pub
+ terraform.tfstate
+ terraform.tfstate.backup
